@@ -28,9 +28,10 @@ class HomeActivity : AppCompatActivity() {
     private fun setUpView() {
         binding.apply {
             /** recycler view set up */
+            homeAdapter = HomeAdapter()
             listCircuitsRv.apply {
                 layoutManager = LinearLayoutManager(this@HomeActivity)
-                adapter = HomeAdapter()
+                adapter = homeAdapter
             }
 
             /** set up view model and observer */
